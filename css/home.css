@@ -1,0 +1,27 @@
+
+.mg_bottom {
+  margin-bottom: 0;
+}
+
+.movie {
+  border: 1px solid black;
+} 
+.movie_img {
+  width: 200px;
+}
+.img{
+  width: 100%;
+}
+.altura{
+  height: 500px;
+}
+.mg_bottom{
+margin-bottom: 10px;
+}
+.trailer{
+  padding: 30%;
+  border: 1px solid black;
+}
+.style_btn{
+margin: 15px;
+}
