@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="icon" href="../assets/images/Camera.png">
+  <title>BlockBuster</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav-extended #00bfa5 teal accent-4">
+      <div class="nav-wrapper">
+        <img class="camera hide-on-small-only middle" src="../assets/images/Camera.png" alt="">
+        <a href="#" class="brand-logo font-title styles font">BlockBuster</a>
+        <a href="#" data-activates="slide-out" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-content hide-on-small-only middle">
+          <ul class="tabs tabs-transparent">
+            <li class="tab">
+              <a class="active font" href="#test1">
+                <p>Home</p>
+              </a>
+            </li>
+            <li class="tab">
+              <a class="active font" href="#test2">
+                <p>Favoritos</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down font">
+          <li>
+            <a href="../index.html" class="close">Cerrar Sesión</a>
+          </li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+          <li>
+          </li>
+          <li>
+            <a href="home.html">
+              <i class="material-icons">home</i>Home</a>
+          </li>
+          <li>
+            <a href="../index.html" class="close">
+              <i class="material-icons">settings_power</i>Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+        </ul>
+      </div> -->
+
+      <div class="nav-content hide-on-large-only">
+        <ul class="tabs tabs-transparent">
+          <li class="tab">
+            <a class="active" href="#test1">
+              <i class="material-icons">home</i>
+            </a>
+          </li>
+          <li class="tab">
+            <a href="#test2">
+              <i class="material-icons">star</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!">
+      <img class='responsive-img coco' src="../assets/images/coco.png">
+    </a>
+    <div class="carousel-fixed-item center">
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">play_arrow</i>Reproducir</a>
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">add</i>Favoritos</a>
+    </div>
+    <a class="carousel-item white-text" href="#two!">
+      <img class='responsive-img gradient' src="../assets/images/papas.png">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </a>
+    <div class="carousel-fixed-item center">
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">play_arrow</i>Reproducir</a>
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">add</i>Favoritos</a>
+    </div>
+    <a class="carousel-item" href="#three!">
+      <img class='responsive-img' src="../assets/images/time.png">
+    </a>
+    <div class="carousel-fixed-item center">
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">play_arrow</i>Reproducir</a>
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">add</i>Favoritos</a>
+    </div>
+    <a class="carousel-item" href="#four!">
+      <img class='responsive-img' src="../assets/images/dog.png">
+    </a>
+    <div class="carousel-fixed-item center">
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">play_arrow</i>Reproducir</a>
+      <a class="waves-effect waves-light btn white black-letter mg_bottom">
+        <i class="material-icons left">add</i>Favoritos</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s4s offset-s4">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 offset-s2 center-align">
+      <a class="modal-trigger" href="#modal1">
+        <img class="movie_img responsive-img" src="../assets/images/1.jpg">
+      </a>
+    </div>
+    <div class="col s2 movie_img">
+      <a class="modal-trigger" href="#modal1">
+        <img class="movie_img responsive-img" src="../assets/images/1.jpg">
+      </a>
+
+    </div>
+    <div class="col s2 movie_img">
+      <a class="modal-trigger" href="#modal1">
+        <img class="movie_img responsive-img" src="../assets/images/1.jpg">
+      </a>
+
+    </div>
+    <div class="col s2 movie_img">
+      <a class="modal-trigger" href="#modal1">
+        <img class="movie_img responsive-img" src="../assets/images/1.jpg">
+      </a>
+
+    </div>
+  </div>
+    <!-- Modales -->
+
+    <!-- Modal Structure movile -->
+    <div id="modal1" class="modal modal-movil modal-fixed-footer hide-on-large-only">
+      <div class="modal-content">
+        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat close">x</a>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 col m12 col l12">
+              <div>
+                <h4>Nombre de la película</h4>
+              </div>
+              <div>
+                <a>Detalles </a>|
+                <a> Comentarios</a>
+              </div>
+              <div>
+                <h6>Sinopsis</h6>
+                <p>---------------------------------------------------------------- -----------------------------------------------------------------
+
+                </p>
+                <h6>Protagonistas</h6>
+                <p>---------------------------------------------------------------- -----------------------------------------------------------------
+                </p>
+                <h3>+18
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                </h3>
+              </div>
+              <video controls class="img-responsive trailer">
+                <source src="../assets/images/time.mp4" type="video/mp4"></source>
+              </video>
+              <br>
+              <br>
+              <a class="waves-effect waves-light btn style_btn">Ver película</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+</body>
+
+</html>
