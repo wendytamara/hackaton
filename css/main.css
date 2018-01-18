@@ -160,6 +160,20 @@ body {
   padding: 0;
 }
 
+.camera {
+  width: 80px;
+}
+
+.title-desktop {
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 600;
+}
+
+.titles {
+  font-family: 'Cabin Sketch', cursive;
+  color: rgb(255, 255, 255);
+}
+
 @media only screen and (min-width: 601px) {
   body {
     background-image: url(../assets/images/portada9.jpg);

@@ -1,6 +1,22 @@
+.font {
+  font-family: 'Cabin Sketch', cursive;
+}
 
 .teal.accent-4 {
   background-color: #0a8eda77 !important;
+}
+
+.middle {
+  margin-left: 350px;
+  display: inline-block;
+}
+
+nav .brand-logo {
+  margin-left: 10px;
+}
+
+.styles {
+ font-weight: 600;
 }
 
 .movie {
@@ -9,6 +25,12 @@
 
 .movie_img {
   width: 200px;
+}
+
+.camera {
+  width: 30px;
+  height: 40px;
+  margin-left: 40px;
 }
 
 .img {
