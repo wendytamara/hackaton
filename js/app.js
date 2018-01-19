@@ -245,14 +245,4 @@ $(document).ready(function() {
       });
     }
     observer();
-
-
-    $('.close').click(function() {
-      firebase.auth().signOut().then(function() {
-        $(location).attr('href', 'register.html');
-      }).catch(function(error) {
-        // An error happened.
-
-      });
-    });
 });
