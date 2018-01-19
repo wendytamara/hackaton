@@ -138,7 +138,7 @@ $(document).ready(function() {
 
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        $(location).attr('href', 'home.html');
+        $(location).attr('href', '../home.html');
       }
     });
   });
@@ -161,7 +161,7 @@ $(document).ready(function() {
         posterPhoto: 'NONE'
       }).then(
         user => {
-          $(location).attr('href', 'home.html');
+          $(location).attr('href', '../views/home.html');
         });
     }).catch(function(error) {
       // Handle Errors here.
@@ -191,7 +191,7 @@ $(document).ready(function() {
         posterPhoto: 'NONE'
       }).then(
         user => {
-          $(location).attr('href', 'home.html');
+          $(location).attr('href', '../home.html');
         });
     }).catch(function(error) {
       // Handle Errors here.
@@ -212,6 +212,47 @@ $(document).ready(function() {
     }).catch(function(error) {
       // An error happened.
 
+
+    function observer() {
+      debugger
+        firebase.auth().onAuthStateChanged(function(user) {
+          var nombreD = $('.nombreD');
+          var photoU = $('.photoU');
+
+        if (user) {
+
+          console.log('usuario activo');
+          var displayName = user.displayName;
+          localStorage.displayName = user.displayName;
+          var email = user.email;
+          console.log(email);
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          console.log(photoURL);
+
+          localStorage.photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+
+
+          nombreD.text(displayName);
+          photoU.attr('src', photoURL );
+
+        } else {
+          console.log('no existe usuario activo');
+        }
+      });
+    }
+    observer();
+
+
+    $('.close').click(function() {
+      firebase.auth().signOut().then(function() {
+        $(location).attr('href', 'register.html');
+      }).catch(function(error) {
+        // An error happened.
+
+      });
     });
-  });
 });
