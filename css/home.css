@@ -82,3 +82,11 @@ nav .brand-logo {
     height: 100%;
   }
 }
+.widthMovies{
+  width: 10%;
+  display: inline;
+}
+.margin{
+  margin: 5px;
+}
+
