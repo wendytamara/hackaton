@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   var config = {
     apiKey: 'AIzaSyCTEIYIpKwepybwx0Gpfh7uKVs339oAZn8',
     authDomain: 'blockbuster-9291e.firebaseapp.com',
@@ -21,7 +21,7 @@ $(document).ready(function () {
   var validateEmail = false;
   var validateName = false;
 
-  emailRegister.on('keyup', function (event) {
+  emailRegister.on('keyup', function(event) {
     var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
 
     if (EMAILUSER.test($(this).val())) {
@@ -33,7 +33,7 @@ $(document).ready(function () {
   });
 
 
-  passwordRegisterNew.on('keyup', function (event) {
+  passwordRegisterNew.on('keyup', function(event) {
     if (passwordRegisterNew.val()) {
       validatePassword = true;
       validateRegister();
@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
   });
 
-  nameRegisterNew.on('keyup', function (event) {
+  nameRegisterNew.on('keyup', function(event) {
     if (nameRegisterNew.val()) {
       validateName = true;
       validateRegister();
@@ -51,7 +51,7 @@ $(document).ready(function () {
     }
   });
 
-  emailLogin.on('keyup', function (event) {
+  emailLogin.on('keyup', function(event) {
     var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
 
     if (EMAILUSER.test($(this).val())) {
@@ -62,7 +62,7 @@ $(document).ready(function () {
     }
   });
 
-  passwordLogin.on('keyup', function (event) {
+  passwordLogin.on('keyup', function(event) {
     if (passwordLogin.val()) {
       validatePassword = true;
       validateUser();
@@ -93,14 +93,14 @@ $(document).ready(function () {
   }
 
 
-  $('.btn-register').click(function () {
+  $('.btn-register').click(function() {
     firebase.auth().createUserWithEmailAndPassword(emailRegister.val(), passwordRegisterNew.val())
-      .catch(function (error) {
+      .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
       });
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(function(user) {
       var userNew = nameRegisterNew.val();
       if (user) {
         // Ingresando datos en la base de datos
@@ -126,14 +126,14 @@ $(document).ready(function () {
   //
   // Autentificación por email y password
 
-  $('.btn-login').click(function (event) {
+  $('.btn-login').click(function(event) {
     event.preventDefault();
 
     var email = emailLogin.val();
     var password = passwordLogin.val();
 
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .catch(function (error) {
+      .catch(function(error) {
         // Handle Errors here.
         alert('email y/o contraseña incorrecta');
         var errorCode = error.code;
@@ -142,7 +142,7 @@ $(document).ready(function () {
 
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        $(location).attr('href', 'home.html');
+        $(location).attr('href', '../home.html');
       }
     });
   });
@@ -150,9 +150,9 @@ $(document).ready(function () {
 
   // Login con Google
   var provider = new firebase.auth.GoogleAuthProvider();
-  $('.btn-google').on('click', function () {
+  $('.btn-google').on('click', function() {
     event.preventDefault();
-    firebase.auth().signInWithPopup(provider).then(function (result) {
+    firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
 
       var user = result.user;
@@ -165,9 +165,9 @@ $(document).ready(function () {
         posterPhoto: 'NONE'
       }).then(
         user => {
-          $(location).attr('href', 'home.html');
+          $(location).attr('href', '../home.html');
         });
-    }).catch(function (error) {
+    }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -180,9 +180,9 @@ $(document).ready(function () {
   });
 
   var providerFacebook = new firebase.auth.FacebookAuthProvider();
-  $('.btn-facebook').on('click', function () {
+  $('.btn-facebook').on('click', function() {
     event.preventDefault();
-    firebase.auth().signInWithPopup(providerFacebook).then(function (result) {
+    firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
       var token = result.credential.accessToken;
 
       var user = result.user;
@@ -195,7 +195,7 @@ $(document).ready(function () {
         posterPhoto: 'NONE'
       }).then(
         user => {
-          $(location).attr('href', 'home.html');
+          $(location).attr('href', '../home.html');
         });
     }).catch(function (error) {
       // Handle Errors here.
@@ -210,10 +210,10 @@ $(document).ready(function () {
   });
 
 
-  $('.close').click(function () {
-    firebase.auth().signOut().then(function () {
+  $('.close').click(function() {
+    firebase.auth().signOut().then(function() {
       $(location).attr('href', 'register.html');
-    }).catch(function (error) {
+    }).catch(function(error) {
       // An error happened.
 
     });
