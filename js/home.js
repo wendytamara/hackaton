@@ -1,6 +1,6 @@
 /* NAVBAR*/
 $('.button-collapse').sideNav();
-$(document).ready(function () {
+$(document).ready(function() {
   $('.dropdown-button').dropdown();
 });
 
@@ -9,7 +9,7 @@ $('.carousel.carousel-slider').carousel({
   fullWidth: true
 });
 $('.carousel').carousel();
-setInterval(function () {
+setInterval(function() {
   $('.carousel').carousel('next');
 }, 5000); // every 2 seconds
 

@@ -1,3 +1,12 @@
+body {
+  background-image: url('../assets/images/fondo.png');
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
 .font {
   font-family: 'Cabin Sketch', cursive;
 }
