@@ -120,8 +120,8 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col s2 offset-s2 center-align">
+  <div class="row" id='content-movie-js'>
+    <!-- <div class="col s2 offset-s2 center-align">
       <a class="modal-trigger" href="#modal1">
         <img class="movie_img responsive-img" src="../assets/images/1.jpg">
       </a>
@@ -140,32 +140,30 @@
       <a class="modal-trigger" href="#modal1">
         <img class="movie_img responsive-img" src="../assets/images/1.jpg">
       </a>
-    </div>
+
+    </div> -->
   </div>
   <!-- Modales -->
 
   <!-- Modal Structure movile -->
-  <div id="modal1" class="modal modal-movil modal-fixed-footer hide-on-large-only">
+  <div id="modal1" class="modal modal-movil modal-fixed-footer">
     <div class="modal-content">
       <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat close">x</a>
       <div class="container">
         <div class="row">
           <div class="col s12 col m12 col l12">
             <div>
-              <h4>Nombre de la película</h4>
+              <h4 id="nameMovie">Nombre de la película</h4>
             </div>
             <div>
-              <a>Detalles</a>
+              <a>Detalles </a>|
               <a> Comentarios</a>
             </div>
             <div>
               <h6>Sinopsis</h6>
-              <p>---------------------------------------------------------------- -----------------------------------------------------------------
-
-              </p>
+              <p id="overview"></p>
               <h6>Protagonistas</h6>
-              <p>---------------------------------------------------------------- -----------------------------------------------------------------
-              </p>
+              <p></p>
               <h3>+18
                 <i class="material-icons">star</i>
                 <i class="material-icons">star</i>
@@ -174,9 +172,11 @@
                 <i class="material-icons">star</i>
               </h3>
             </div>
-            <video controls class="img-responsive trailer">
+            <!-- <video controls class="img-responsive trailer">
               <source src="../assets/images/time.mp4" type="video/mp4"></source>
-            </video>
+            </video> -->
+            <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen id="trailer"></iframe>
             <br>
             <br>
             <a class="waves-effect waves-light btn style_btn">Ver película</a>
@@ -185,6 +185,7 @@
       </div>
     </div>
   </div>
+
 
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
