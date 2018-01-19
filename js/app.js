@@ -120,10 +120,6 @@ $(document).ready(function() {
   });
 
 
-  // borrar
-
-
-  //
   // Autentificación por email y password
 
   $('.btn-login').click(function(event) {
@@ -197,7 +193,7 @@ $(document).ready(function() {
         user => {
           $(location).attr('href', '../home.html');
         });
-    }).catch(function (error) {
+    }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -210,6 +206,11 @@ $(document).ready(function() {
   });
 
 
+  $('.close').click(function() {
+    firebase.auth().signOut().then(function() {
+      $(location).attr('href', '../index.html');
+    }).catch(function(error) {
+      // An error happened.
 
 
     function observer() {
@@ -254,15 +255,4 @@ $(document).ready(function() {
 
       });
     });
-
-    $('.close').click(function() {
-      firebase.auth().signOut().then(function() {
-        $(location).attr('href', 'register.html');
-      }).catch(function(error) {
-        // An error happened.
-
-      });
-    });
-
-
 });
