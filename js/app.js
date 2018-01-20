@@ -152,7 +152,7 @@ $(document).ready(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
 
-      window.location.href = '../views/home.html';
+      window.location.href = '../hackaton/views/home.html';
       var user = result.user;
 
       firebase.database().ref('users/' + user.uid).set({
