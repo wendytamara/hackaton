@@ -138,7 +138,8 @@ $(document).ready(function() {
 
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        $(location).attr('href', '../home.html');
+
+        window.location.href = '../js/views/home.html';
       }
     });
   });
@@ -151,6 +152,7 @@ $(document).ready(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
 
+      window.location.href = '../views/home.html';
       var user = result.user;
 
       firebase.database().ref('users/' + user.uid).set({
@@ -159,9 +161,10 @@ $(document).ready(function() {
         uid: user.uid,
         profilePhoto: user.photoURL,
         posterPhoto: 'NONE'
+
       }).then(
         user => {
-          $(location).attr('href', '../views/home.html');
+
         });
     }).catch(function(error) {
       // Handle Errors here.
@@ -205,44 +208,43 @@ $(document).ready(function() {
     });
   });
 
-
-  $('.close').click(function() {
-    firebase.auth().signOut().then(function() {
-      $(location).attr('href', '../index.html');
-    }).catch(function(error) {
-      // An error happened.
-
-
-    function observer() {
-      debugger
-        firebase.auth().onAuthStateChanged(function(user) {
-          var nombreD = $('.nombreD');
-          var photoU = $('.photoU');
-
-        if (user) {
-
-          console.log('usuario activo');
-          var displayName = user.displayName;
-          localStorage.displayName = user.displayName;
-          var email = user.email;
-          console.log(email);
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          console.log(photoURL);
-
-          localStorage.photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
+// esto es el repo bien :)
+  // $('.close').click(function() {
+  //   firebase.auth().signOut().then(function() {
+  //     $(location).attr('href', '../index.html');
+  //   }).catch(function(error) {   // An error happened.
 
 
-          nombreD.text(displayName);
-          photoU.attr('src', photoURL );
+  function observer() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      var nombreD = $('.nombreD');
+      var photoU = $('.photoU');
+      if (user) {
 
-        } else {
-          console.log('no existe usuario activo');
-        }
-      });
-    }
-    observer();
+        console.log('usuario activo');
+        var displayName = user.displayName;
+        localStorage.displayName = user.displayName;
+        var email = user.email;
+        console.log(email);
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        console.log(photoURL);
+
+        localStorage.photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+
+
+        nombreD.text(displayName);
+        photoU.attr('src', photoURL );
+
+      } else {
+        console.log('no existe usuario activo');
+      }
+    });
+  }
+
+  observer();
+
 });

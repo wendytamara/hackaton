@@ -11,7 +11,7 @@ $('.carousel.carousel-slider').carousel({
 $('.carousel').carousel();
 setInterval(function() {
   $('.carousel').carousel('next');
-}, 5000); // every 2 seconds
+}, 5000);
 
 /* Select*/
 
@@ -27,12 +27,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
- 
+
   // Filtros del input
   $('.search').keyup(function() {
     var name = $(this).val().toLowerCase();
     $('.collection').hide();
-   
+
     $('.collection').each(function() { // filtro por titulo
       var search = $(this).text();
       var $title = $(this).data('title');
@@ -40,7 +40,14 @@ $(document).ready(function() {
         $(this).show();
       }
     });
-   
-  });
-});
 
+  });
+
+  var movies = $('.movies');
+
+  movies.on('click', showComents);
+  function showComents() {
+    window.location.href = '../views/verPelicula.html';
+  }
+
+});

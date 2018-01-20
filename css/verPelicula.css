@@ -38,3 +38,31 @@
   border: none;
   margin-top: 21px;
 }
+
+.post {
+  background-color: rgba(255, 229, 195, 0.548);
+  margin-bottom: 35px !important;
+}
+
+.post-text {
+  border: none;
+  margin-top: 21px;
+}
+
+.photoU {
+  width: 50px;
+}
+
+.nombreD {
+font-weight: 700;
+padding-left: 20px !important;
+
+}
+
+.grey-text {
+  padding-left: 20px;
+}
+
+#cont {
+  padding: 30px 50px;
+}
