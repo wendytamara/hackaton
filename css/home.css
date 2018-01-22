@@ -71,6 +71,10 @@ nav .brand-logo {
   font-size: 1.3em;
 }
 
+.name-class {
+  padding-right: 20px;
+}
+
 .widthMovies{
   width: 100%;
   display: inline-block;
