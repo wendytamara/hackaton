@@ -84,6 +84,18 @@ nav .brand-logo {
   margin: 20px;
 }
 
+/*Modificando Modal*/
+.modal { width: 85% !important ; height: 85% !important ; } 
+.container{
+  margin: 10px;
+}
+.mgBtnModal{
+margin-bottom: 0;
+}
+.modal .modalpadding{
+padding-bottom: 0;
+}
+
 @media only screen and (min-width: 601px) {
   .space {
     margin-left: 125px;
