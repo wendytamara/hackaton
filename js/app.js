@@ -208,11 +208,6 @@ $(document).ready(function() {
     });
   });
 
-// esto es el repo bien :)
-  // $('.close').click(function() {
-  //   firebase.auth().signOut().then(function() {
-  //     $(location).attr('href', '../index.html');
-  //   }).catch(function(error) {   // An error happened.
 
 
   function observer() {
