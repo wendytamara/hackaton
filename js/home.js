@@ -11,7 +11,7 @@ $('.carousel.carousel-slider').carousel({
 $('.carousel').carousel();
 setInterval(function() {
   $('.carousel').carousel('next');
-}, 5000);
+}, 150000);
 
 /* Select*/
 
@@ -21,19 +21,19 @@ $(document).ready(function() {
 
 /* Modales */
 
-$(document).ready(function() {
+$(document).ready(function () {
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   // Filtros del input
-  $('.search').keyup(function() {
+  $('.search').keyup(function () {
     var name = $(this).val().toLowerCase();
     $('.collection').hide();
 
-    $('.collection').each(function() { // filtro por titulo
+    $('.collection').each(function () { // filtro por titulo
       var search = $(this).text();
       var $title = $(this).data('title');
       if ($title.indexOf(name) !== -1) {
@@ -46,6 +46,7 @@ $(document).ready(function() {
   var movies = $('.movies');
 
   movies.on('click', showComents);
+
   function showComents() {
     window.location.href = '../views/verPelicula.html';
   }

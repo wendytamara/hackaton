@@ -1,4 +1,3 @@
-
 var config = {
   apiKey: 'AIzaSyCTEIYIpKwepybwx0Gpfh7uKVs339oAZn8',
   authDomain: 'blockbuster-9291e.firebaseapp.com',
@@ -38,7 +37,6 @@ btnEnviar.on('click', function() {
 firebase.database().ref('chat')
   .on('value', function(snapshot) {
     var html = '';
-
     snapshot.forEach(function(e) {
       var element = e.val();
       var nombre = element.name;

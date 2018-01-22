@@ -46,10 +46,10 @@
 
   <div class="carousel carousel-slider">
     <a class="carousel-item" href="#one!">
-      <img class='responsive-img coco' src="../assets/images/coco.png">
+      <img class='responsive-img' src="../assets/images/coco.png">
     </a>
     <a class="carousel-item white-text" href="#two!">
-      <img class='responsive-img gradient' src="../assets/images/papas.png">
+      <img class='responsive-img' src="../assets/images/papas.png">
     </a>
     <a class="carousel-item" href="#three!">
       <img class='responsive-img' src="../assets/images/time.png">
@@ -59,8 +59,7 @@
     </a>
   </div>
 
-
-  <div class="row">
+  <div class="row height-1">
     <div class="col s6 offset-s3">
       <div class="input-group">
         <span class="input-group-addon"></span>
@@ -70,9 +69,8 @@
   </div>
 
   <div class="row">
-    <div class="col m8 offset-m2">
-      <div class="row" id='content-movie-js'>
-
+    <div class="col m12">
+      <div class="row space" id='content-movie-js'>
       </div>
     </div>
 
@@ -83,15 +81,13 @@
 
   <!-- Modal Structure movile -->
   <div id="modal1" class="modal modal-movil modal-fixed-footer">
-    <div class="modal-content">
+    <div class="modal-content modalpadding height-modal">
       <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat close">x</a>
       <div class="container">
-        <div class="row">
-          <div class="col s12 col m12 col l12">
-            <div>
+        <div class="row mgBtnModal">
+          <div class="col s12 m7">
+          
               <h4 id="nameMovie">Nombre de la película</h4>
-            </div>
-            <div>
               <h6>Sinopsis</h6>
               <p id="overview"></p>
               <h6>Protagonistas</h6>
@@ -103,13 +99,13 @@
                 <i class="material-icons">star</i>
                 <i class="material-icons">star</i>
               </h3>
-            </div>
-          
-            <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="trailer"></iframe>
-            <br>
+           </div>
+          <div class="col s12 m5">
+            <iframe width="510" height="310" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="trailer"></iframe>
             <br>
             <a class="waves-effect waves-light btn style_btn movies">Ver película</a>
           </div>
+        </div>
         </div>
       </div>
     </div>
