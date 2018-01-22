@@ -96,9 +96,14 @@ margin-bottom: 0;
 padding-bottom: 0;
 }
 
+.collection {
+  border: none;
+}
+
 .height-modal {
   height: initial !important;
 }
+
 @media only screen and (min-width: 601px) {
   .space {
     margin-left: 125px;
