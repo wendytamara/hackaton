@@ -11,7 +11,7 @@ $.getJSON(url + apiKey + language, function (results) {
     var posterPath = element['poster_path'];
     var title = element['title'];
     var lowerCase = title.toLowerCase();
-    console.log(title);
+    // console.log(title);
     $('#content-movie-js').append(
       '<div class="col s12 m2 center-align movie-js collection widthMovies margin height"' + 'data-id="' + idVideo + '"' + 'data-title="'+ lowerCase + '">' +
       '<a class="modal-trigger" href="#modal1">' +

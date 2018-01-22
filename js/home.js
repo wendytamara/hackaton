@@ -11,7 +11,7 @@ $('.carousel.carousel-slider').carousel({
 $('.carousel').carousel();
 setInterval(function() {
   $('.carousel').carousel('next');
-}, 5000);
+}, 150000);
 
 /* Select*/
 
